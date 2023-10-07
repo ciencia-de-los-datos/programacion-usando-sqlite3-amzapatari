@@ -37,4 +37,7 @@
 --  0  29  101.11  100  2017-11-17  0.42  MV-CB
 --
 --  >>> Escriba su codigo a partir de este punto <<<
---
+SELECT *
+FROM tbl2
+WHERE tbl2.c21 = (SELECT MIN(tbl2.c21) FROM tbl2)
+LIMIT 1;
